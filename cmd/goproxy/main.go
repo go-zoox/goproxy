@@ -1,11 +1,11 @@
 package main
 
 import (
-	"github.com/go-zoox/api-gateway"
 	"github.com/go-zoox/cli"
 	"github.com/go-zoox/config"
 	"github.com/go-zoox/core-utils/fmt"
 	"github.com/go-zoox/fs"
+	api "github.com/go-zoox/goproxy"
 	"github.com/go-zoox/goproxy/core"
 	"github.com/go-zoox/logger"
 )
