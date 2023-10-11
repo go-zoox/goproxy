@@ -19,21 +19,21 @@ RUN CGO_ENABLED=0 \
   go build \
   -trimpath \
   -ldflags '-w -s -buildid=' \
-  -v -o api-gateway ./cmd/api-gateway
+  -v -o goproxy ./cmd/goproxy
 
 # Server
 FROM whatwewant/alpine:v3.17-1
 
 LABEL MAINTAINER="Zero<tobewhatwewant@gmail.com>"
 
-LABEL org.opencontainers.image.source="https://github.com/go-zoox/api-gateway"
+LABEL org.opencontainers.image.source="https://github.com/go-zoox/goproxy"
 
 ARG VERSION=latest
 
 ENV TERMINAL_VERSION=${VERSION}
 
-COPY --from=builder /build/api-gateway /bin
+COPY --from=builder /build/goproxy /bin
 
-RUN api-gateway --version
+RUN goproxy --version
 
-CMD api-gateway -c /etc/api-gateway/config.yaml
+CMD goproxy -c /etc/goproxy/config.yaml

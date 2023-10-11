@@ -1,4 +1,4 @@
-# goproxy - A CLI for [GoProxy](https://goproxy.cn/)
+# GoProxy - A CLI for [GoProxy](https://goproxy.cn/)
 
 [![PkgGoDev](https://pkg.go.dev/badge/github.com/go-zoox/goproxy)](https://pkg.go.github.com/go-zoox/goproxy)
 [![Build Status](https://github.com/go-zoox/goproxy/actions/workflows/release.yml/badge.svg?branch=master)](httpgithub.com/go-zoox/goproxy/actions/workflows/release.yml)

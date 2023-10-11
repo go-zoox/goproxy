@@ -15,7 +15,7 @@ database:
   port: 5432
   username: postgres
   password: postgres
-  db: api-gateway
+  db: goproxy
 
 healthcheck:
   # respond to health check requests

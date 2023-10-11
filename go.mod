@@ -1,4 +1,4 @@
-module github.com/go-zoox/api-gateway
+module github.com/go-zoox/goproxy
 
 go 1.20
 

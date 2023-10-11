@@ -2,23 +2,23 @@ package main
 
 import (
 	"github.com/go-zoox/api-gateway"
-	"github.com/go-zoox/api-gateway/core"
 	"github.com/go-zoox/cli"
 	"github.com/go-zoox/config"
 	"github.com/go-zoox/core-utils/fmt"
 	"github.com/go-zoox/fs"
+	"github.com/go-zoox/goproxy/core"
 	"github.com/go-zoox/logger"
 )
 
 func main() {
 	app := cli.NewSingleProgram(&cli.SingleProgramConfig{
-		Name:    "api-gateway",
+		Name:    "goproxy",
 		Usage:   "An Easy Self Hosted API Gateway",
 		Version: api.Version,
 		Flags: []cli.Flag{
 			&cli.StringFlag{
 				Name: "config",
-				// Value:   "conf/api-gateway.yaml",
+				// Value:   "conf/goproxy.yaml",
 				Usage:   "The path to the configuration file",
 				Aliases: []string{"c"},
 				// Required: true,
@@ -60,7 +60,7 @@ func main() {
 	app.Command(func(c *cli.Context) error {
 		configFilePath := c.String("config")
 		if configFilePath == "" {
-			configFilePath = "/etc/api-gateway/config.yaml"
+			configFilePath = "/etc/goproxy/config.yaml"
 		}
 
 		var cfg core.Config

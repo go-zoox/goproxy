@@ -1,4 +1,4 @@
 package api
 
-// Version is the version of api-gateway
+// Version is the version of goproxy
 var Version = "1.2.2"
