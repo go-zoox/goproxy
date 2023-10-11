@@ -10,6 +10,7 @@ import (
 	"github.com/go-zoox/zoox/defaults"
 )
 
+// Core ...
 type Core interface {
 	Version() string
 	Run() error
@@ -22,6 +23,7 @@ type core struct {
 	cfg     *Config
 }
 
+// New ...
 func New(version string, cfg *Config) (Core, error) {
 	c := &core{
 		app: defaults.Default(),
